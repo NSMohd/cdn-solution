@@ -25,26 +25,31 @@ This Web API project serve basic purpose of register/delete/update/get User usin
      }
      ```
 
-2. **Apply Migrations:**
+2. **Restore packages**
+   ```bash
+     dotnet restore 
+   ```    
+
+3. **Apply Migrations:**
    - Open a terminal or command prompt in the project directory.
    - Run the following command to apply Entity Framework Core migrations and create the database:
      ```bash
      dotnet ef database update
      ```
 
-3. **Client Side Example**
+4. **Client Side Example**
     - get from https://github.com/NSMohd/cdn-solution-client    
 
 ## API Endpoints
 
-GET /api/Users: Retrieve a list of all books.
-GET /api/Users/:id: Retrieve a specific book by ID.
-POST /api/Users: Create a new book.
-PUT /api/Users/:id: Update a specific book by ID.
-DELETE /api/Users/:id: Delete a specific book by ID.
+- GET /api/Users: Retrieve a list of all books.
+- GET /api/Users/:id: Retrieve a specific book by ID.
+- POST /api/Users: Create a new book.
+- PUT /api/Users/:id: Update a specific book by ID.
+- DELETE /api/Users/:id: Delete a specific book by ID.
 
 ## Models
-
+```bash
 User
 {
   UserID: Number,
@@ -54,13 +59,13 @@ User
   Skillsets: String,
   Hobby: String
 }
-
+```
 ## Controllers
 
-UsersController:
-Index: Retrieve all books.
-Create: Create a new book.
-Edit: Update a book by ID.
-Delete: Delete a book by ID.
+### UsersController:
+- Index: Retrieve all books.
+- Create: Create a new book.
+- Edit: Update a book by ID.
+- Delete: Delete a book by ID.
 
 
