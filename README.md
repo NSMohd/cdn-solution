@@ -6,12 +6,12 @@ This Web API project serve basic purpose of register/delete/update/get User usin
 
 ## Table of Contents
 
-- [Usage](#usage)
+- [Configuration](#configuration)
 - [API Endpoints](#api-endpoints)
 - [Models](#models)
 - [Controllers](#controllers)
 
-## Usage
+## Configuration
 
 1. **Database Connection String:**
    - Open the `appsettings.json` file in the project root.
