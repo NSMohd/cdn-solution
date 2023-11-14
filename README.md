@@ -2,7 +2,7 @@
 
 ## Description
 
-This Web API project serve basic purpose of register/delete/update/get User using ASP.NET Core Web API. This Web API can be used with https://github.com/NSMohd/cdn-solution-client which is ASP.NET Core Web App in MVC Architecture.
+This Web API project serve basic purpose of register/delete/update/get User using ASP.NET Core Web API. This Web API can be used with https://github.com/NSMohd/cdn-solution-client which is ASP.NET Core Web App in MVC Architecture. The database uses MSSQL.
 
 ## Table of Contents
 
@@ -13,8 +13,27 @@ This Web API project serve basic purpose of register/delete/update/get User usin
 
 ## Usage
 
-Can run with Web App solution in repo https://github.com/NSMohd/cdn-solution-client.
-Configure SQL connection at appsettings.json 
+1. **Database Connection String:**
+   - Open the `appsettings.json` file in the project root.
+   - Locate the `"ConnectionStrings"` section and update the `"DefaultConnection"` value with your SQL Server connection string. Example:
+     ```json
+     {
+       "ConnectionStrings": {
+         "DefaultConnection": "Server=your-server;Database=CDNcompany;Integrated Security=True;"
+       },
+       // ... other configurations
+     }
+     ```
+
+2. **Apply Migrations:**
+   - Open a terminal or command prompt in the project directory.
+   - Run the following command to apply Entity Framework Core migrations and create the database:
+     ```bash
+     dotnet ef database update
+     ```
+
+3. **Client Side Example**
+    - get from https://github.com/NSMohd/cdn-solution-client    
 
 ## API Endpoints
 
